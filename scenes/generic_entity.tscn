@@ -1,0 +1,383 @@
+[gd_scene load_steps=54 format=3 uid="uid://byd4miqwgfx7v"]
+
+[ext_resource type="Script" path="res://scripts/generic_entity.gd" id="1_f2vay"]
+[ext_resource type="Texture2D" uid="uid://cybvxq5rj3shx" path="res://assets/enemies/textures/small_slime/02.png" id="2_0i6ip"]
+[ext_resource type="Texture2D" uid="uid://g388bwhb0e7k" path="res://assets/enemies/textures/goblin/00.png" id="2_2d4y0"]
+[ext_resource type="Texture2D" uid="uid://cq2oxpt3gp68d" path="res://assets/enemies/textures/armored_goblin/00.png" id="2_dngfn"]
+[ext_resource type="FontFile" uid="uid://dt55moadn75gc" path="res://assets/font/Roboto_Mono/static/RobotoMono-Bold.ttf" id="2_gsi1j"]
+[ext_resource type="Texture2D" uid="uid://rfoj5jpi1rsq" path="res://assets/enemies/textures/large_slime/00.png" id="2_nuh61"]
+[ext_resource type="Texture2D" uid="uid://csiw3a0bmr4tk" path="res://assets/enemies/textures/large_slime/01.png" id="3_57m7v"]
+[ext_resource type="Texture2D" uid="uid://cqhmdnb0mbjku" path="res://assets/enemies/textures/small_slime/00.png" id="3_qtfnm"]
+[ext_resource type="Texture2D" uid="uid://cuhvbo8b80muf" path="res://assets/enemies/textures/armored_goblin/01.png" id="3_tie51"]
+[ext_resource type="Texture2D" uid="uid://cxw76q4mj565b" path="res://assets/enemies/textures/goblin/01.png" id="3_wvdxt"]
+[ext_resource type="Texture2D" uid="uid://dj78tj7a3p4ub" path="res://assets/enemies/textures/small_slime/01.png" id="4_0gmr8"]
+[ext_resource type="Texture2D" uid="uid://px28788svygf" path="res://assets/enemies/textures/large_slime/02.png" id="4_fr6f3"]
+[ext_resource type="Texture2D" uid="uid://dssqtsj774ewu" path="res://assets/enemies/textures/goblin/02.png" id="4_lctb6"]
+[ext_resource type="Texture2D" uid="uid://dhubxk8uawobt" path="res://assets/enemies/textures/armored_goblin/02.png" id="4_teimv"]
+[ext_resource type="Texture2D" uid="uid://8eknn7yl01m0" path="res://assets/enemies/textures/armored_goblin/03.png" id="5_8ha4m"]
+[ext_resource type="Texture2D" uid="uid://c2u84ygv6vq85" path="res://assets/enemies/textures/large_slime/03.png" id="5_17hhl"]
+[ext_resource type="Texture2D" uid="uid://btyjpg61hac6v" path="res://assets/enemies/textures/goblin/03.png" id="5_r6slt"]
+[ext_resource type="Texture2D" uid="uid://b2n2wpji8f2tn" path="res://assets/enemies/textures/blazing_breach/0077.png" id="7_rc3u8"]
+[ext_resource type="Texture2D" uid="uid://cg8pdatmnrx8o" path="res://assets/enemies/textures/blazing_breach/0079.png" id="8_xrvby"]
+[ext_resource type="Texture2D" uid="uid://dknf3pakurd2t" path="res://assets/enemies/textures/spider/00.png" id="9_8aegd"]
+[ext_resource type="Texture2D" uid="uid://gadxleg6d8tx" path="res://assets/enemies/textures/blazing_breach/0081.png" id="9_enda8"]
+[ext_resource type="Texture2D" uid="uid://c7nl0nln8jbxf" path="res://assets/enemies/textures/spiderling/00.png" id="9_g2fi7"]
+[ext_resource type="Texture2D" uid="uid://bd8toe48oy0l4" path="res://assets/enemies/textures/spiderling/01.png" id="10_h6nxf"]
+[ext_resource type="Texture2D" uid="uid://dsa1s51nju72d" path="res://assets/enemies/textures/blazing_breach/0083.png" id="10_nqoku"]
+[ext_resource type="Texture2D" uid="uid://d1ebj0625y4kn" path="res://assets/enemies/textures/spider/01.png" id="10_wjhjg"]
+[ext_resource type="Texture2D" uid="uid://ddnfko230qxmx" path="res://assets/enemies/textures/spiderling/02.png" id="11_26evl"]
+[ext_resource type="Texture2D" uid="uid://cusrwj3vy5x8t" path="res://assets/enemies/textures/blazing_breach/0085.png" id="11_cnvkc"]
+[ext_resource type="Texture2D" uid="uid://ctslebyiqxylp" path="res://assets/enemies/textures/goblin_king/00.png" id="11_jpkb7"]
+[ext_resource type="Texture2D" uid="uid://dpipys5kjqhf7" path="res://assets/enemies/textures/spider/02.png" id="11_x80a2"]
+[ext_resource type="Texture2D" uid="uid://d3d6mfgwsll3" path="res://assets/enemies/textures/blazing_breach/0087.png" id="12_duys4"]
+[ext_resource type="Texture2D" uid="uid://3fduaqa5kc8i" path="res://assets/enemies/textures/goblin_king/01.png" id="13_6s5cw"]
+[ext_resource type="Texture2D" uid="uid://cqux3ooqynej0" path="res://assets/enemies/textures/goblin_king/02.png" id="14_ct2fv"]
+[ext_resource type="Texture2D" uid="uid://c48iilbmeqdcj" path="res://assets/enemies/textures/goblin_king/03.png" id="15_8odce"]
+[ext_resource type="Texture2D" uid="uid://ckrnrjmi1rmj1" path="res://assets/enemies/textures/spider_mother/00.png" id="15_t3ptb"]
+[ext_resource type="Texture2D" uid="uid://y3aa7jygj8ij" path="res://assets/enemies/textures/goblin_king/04.png" id="16_o16df"]
+[ext_resource type="Texture2D" uid="uid://cd410fifj0lye" path="res://assets/enemies/textures/spider_mother/01.png" id="16_op6wm"]
+[ext_resource type="Texture2D" uid="uid://ssvs45yhbcj8" path="res://assets/enemies/textures/goblin_king/05.png" id="17_igq8l"]
+[ext_resource type="Texture2D" uid="uid://derrlpg8f2gb3" path="res://assets/enemies/textures/spider_mother/02.png" id="17_wspvq"]
+[ext_resource type="Texture2D" uid="uid://cq30sshsrhhib" path="res://assets/enemies/textures/the_ironclad/00.png" id="34_pa7e7"]
+[ext_resource type="Texture2D" uid="uid://cb5bhq2oxktvw" path="res://assets/enemies/textures/the_ironclad/01.png" id="35_db603"]
+[ext_resource type="Texture2D" uid="uid://dp8vn88bx13u3" path="res://assets/enemies/textures/the_ironclad/02.png" id="36_p1tlr"]
+[ext_resource type="Texture2D" uid="uid://c6jh8usp2bcsd" path="res://assets/enemies/textures/the_ironclad/03.png" id="37_l4hid"]
+[ext_resource type="Texture2D" uid="uid://b4l6mt8qkq6ry" path="res://assets/enemies/textures/the_ironclad/04.png" id="38_xtwrm"]
+[ext_resource type="Texture2D" uid="uid://dc0bijgn0jccd" path="res://assets/enemies/textures/the_ironclad/05.png" id="39_mheuq"]
+
+[sub_resource type="Gradient" id="Gradient_prype"]
+colors = PackedColorArray(0, 0, 0, 0.298039, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rb3pe"]
+gradient = SubResource("Gradient_prype")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_868g3"]
+radius = 75.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkg20"]
+bg_color = Color(0.154876, 0.154876, 0.154876, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.529067, 0.529067, 0.529066, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_color = Color(0, 0, 0, 0.392157)
+shadow_size = 1
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vbklm"]
+bg_color = Color(0.59, 0.059, 0.0767, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0, 0.0235294, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8apfv"]
+bg_color = Color(0.150962, 0.660984, 0.80787, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.183107, 0.830796, 0.798897, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="Gradient" id="Gradient_i6i15"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vq68k"]
+gradient = SubResource("Gradient_i6i15")
+width = 4
+height = 4
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qrfri"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dngfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tie51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_teimv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8ha4m")
+}],
+"loop": true,
+"name": &"armored_goblin",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_rc3u8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xrvby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_enda8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nqoku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cnvkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_duys4")
+}],
+"loop": true,
+"name": &"blazing_breach",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2d4y0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wvdxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lctb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r6slt")
+}],
+"loop": true,
+"name": &"goblin",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_jpkb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6s5cw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ct2fv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8odce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_o16df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_igq8l")
+}],
+"loop": true,
+"name": &"goblin_king",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nuh61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_57m7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fr6f3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_17hhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_57m7v")
+}],
+"loop": true,
+"name": &"large_slime",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0i6ip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qtfnm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0gmr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qtfnm")
+}],
+"loop": true,
+"name": &"small_slime",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_8aegd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wjhjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_x80a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wjhjg")
+}],
+"loop": true,
+"name": &"spider",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_t3ptb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_op6wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_wspvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_op6wm")
+}],
+"loop": true,
+"name": &"spider_mother",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_g2fi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h6nxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_26evl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h6nxf")
+}],
+"loop": true,
+"name": &"spiderling",
+"speed": 4.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"the_disease_wanderer",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_pa7e7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_db603")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_p1tlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_l4hid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_xtwrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_mheuq")
+}],
+"loop": true,
+"name": &"the_ironclad",
+"speed": 6.0
+}]
+
+[node name="GenericEntity" type="Node2D"]
+script = ExtResource("1_f2vay")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1.19209e-06, 28.5)
+scale = Vector2(1.46875, 0.453125)
+texture = SubResource("GradientTexture2D_rb3pe")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_868g3")
+
+[node name="EntityName" type="Label" parent="."]
+offset_left = -56.0
+offset_top = 44.0
+offset_right = 56.0
+offset_bottom = 67.0
+text = "spiderling"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(100, 10)
+offset_left = -50.0
+offset_top = 68.0
+offset_right = 50.0
+offset_bottom = 78.0
+theme_override_styles/background = SubResource("StyleBoxFlat_lkg20")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vbklm")
+value = 35.0
+show_percentage = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HealthBar"]
+layout_mode = 0
+offset_left = 103.0
+offset_right = 1232.0
+offset_bottom = 277.0
+scale = Vector2(0.067, 0.067)
+theme_override_fonts/normal_font = ExtResource("2_gsi1j")
+theme_override_font_sizes/normal_font_size = 200
+bbcode_enabled = true
+text = "[color=#EF0730]100/100"
+
+[node name="ShieldBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(100, 7)
+offset_left = -50.0
+offset_top = 84.0
+offset_right = 50.0
+offset_bottom = 91.0
+theme_override_styles/background = SubResource("StyleBoxFlat_lkg20")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8apfv")
+value = 35.0
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("GradientTexture2D_vq68k")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-44, 116)
+
+[node name="EffectsList" type="Node2D" parent="."]
+
+[node name="EntityAnimation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_qrfri")
+animation = &"blazing_breach"
+frame_progress = 0.993914
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

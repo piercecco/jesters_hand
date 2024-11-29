@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://bec2wk2lf08nw"]
+
+[ext_resource type="Texture2D" uid="uid://xuj73wrqynu" path="res://assets/cards/effect_icons.svg" id="1_h03bi"]
+[ext_resource type="Shader" path="res://scripts/shaders/grayscale.gdshader" id="1_jglkv"]
+[ext_resource type="Script" path="res://scripts/effect_icon.gd" id="3_er7vt"]
+[ext_resource type="FontFile" uid="uid://bc2qkcqb16f24" path="res://assets/font/Space_Mono/SpaceMono-BoldItalic.ttf" id="4_s6qfb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ebg0x"]
+resource_local_to_scene = true
+shader = ExtResource("1_jglkv")
+shader_parameter/is_enabled = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o08s4"]
+bg_color = Color(0.1, 0.1, 0.1, 0.980392)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ipr1f"]
+
+[node name="EffectIcon" type="Sprite2D"]
+material = SubResource("ShaderMaterial_ebg0x")
+texture = ExtResource("1_h03bi")
+vframes = 10
+script = ExtResource("3_er7vt")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = 6
+z_as_relative = false
+offset_left = 81.0
+offset_top = -1279.0
+offset_right = 2767.0
+offset_bottom = 35.0
+pivot_offset = Vector2(0, 1314)
+theme_override_styles/panel = SubResource("StyleBoxFlat_o08s4")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="Panel/MarginContainer"]
+custom_minimum_size = Vector2(0, 1200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_s6qfb")
+theme_override_font_sizes/font_size = 125
+text = "test text description which has to be truly long and combplicated ajkad ahdakj dkjbfa asuihfuksaih asiufhasuhf as aiufhsauif"
+vertical_alignment = 1
+autowrap_mode = 2
+text_overrun_behavior = 2
+
+[node name="MouseDetector" type="Panel" parent="."]
+offset_left = -69.0
+offset_top = -95.0
+offset_right = 86.0
+offset_bottom = 84.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ipr1f")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.435294)
+z_index = -1
+position = Vector2(10, 10)
+texture = ExtResource("1_h03bi")
+vframes = 10
+
+[connection signal="mouse_entered" from="MouseDetector" to="." method="_on_mouse_detector_mouse_entered"]
+[connection signal="mouse_exited" from="MouseDetector" to="." method="_on_mouse_detector_mouse_exited"]

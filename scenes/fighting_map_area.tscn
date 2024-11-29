@@ -1,0 +1,164 @@
+[gd_scene load_steps=14 format=3 uid="uid://ckqwe1dsqs502"]
+
+[ext_resource type="Script" path="res://scripts/fighting_map_area.gd" id="1_sxdqm"]
+[ext_resource type="Shader" path="res://scenes/fighting_map_area_blur.gdshader" id="2_h7603"]
+[ext_resource type="Texture2D" uid="uid://q3fp66p5agqy" path="res://assets/menus/fight_map_area.png" id="2_kxwso"]
+[ext_resource type="PackedScene" uid="uid://cqvt06o2i7gt4" path="res://scenes/player_gui.tscn" id="2_owgqx"]
+[ext_resource type="PackedScene" uid="uid://wp4bs12sau8r" path="res://scenes/player_use_card_pos.tscn" id="3_2fkpd"]
+[ext_resource type="FontFile" uid="uid://dt55moadn75gc" path="res://assets/font/Roboto_Mono/static/RobotoMono-Bold.ttf" id="3_tykgt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_um7sj"]
+shader = ExtResource("2_h7603")
+shader_parameter/blur_amount = 4.718
+shader_parameter/mix_amount = 0.584
+shader_parameter/color_over = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fdd2l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_alcpn"]
+bg_color = Color(0.34, 0.34, 0.34, 0.443137)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bv8oa"]
+bg_color = Color(0.18, 0.18, 0.18, 0.301961)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6nng0"]
+bg_color = Color(0, 0, 0, 0.254902)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sep4k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aww5x"]
+bg_color = Color(0, 0, 0, 0.254902)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="FightingMapArea" type="Node2D"]
+script = ExtResource("1_sxdqm")
+
+[node name="TextureRect" type="Sprite2D" parent="."]
+z_index = -5
+material = SubResource("ShaderMaterial_um7sj")
+position = Vector2(640, 360)
+texture = ExtResource("2_kxwso")
+
+[node name="PlayerGUI" parent="." instance=ExtResource("2_owgqx")]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="EndTurnButton" type="Button" parent="."]
+offset_left = 1003.0
+offset_top = 634.0
+offset_right = 1264.0
+offset_bottom = 711.0
+theme_override_fonts/font = ExtResource("3_tykgt")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fdd2l")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_alcpn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bv8oa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_alcpn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6nng0")
+text = "END TURN"
+
+[node name="StillInCombatLabel" type="Label" parent="EndTurnButton"]
+layout_mode = 0
+offset_left = -98.0
+offset_top = 23.0
+offset_right = 11.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(1, 0.531167, 0.03, 1)
+theme_override_fonts/font = ExtResource("3_tykgt")
+text = "TURN STILL ONGOING!"
+autowrap_mode = 2
+
+[node name="EndCombatButton" type="Button" parent="."]
+offset_left = 1045.0
+offset_top = 585.0
+offset_right = 1263.0
+offset_bottom = 628.0
+theme_override_fonts/font = ExtResource("3_tykgt")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sep4k")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_alcpn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bv8oa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_alcpn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_aww5x")
+text = "BACK TO MAP ->"
+
+[node name="StillInCombatLabel" type="Label" parent="EndCombatButton"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -21.0
+offset_right = 201.0
+offset_bottom = 2.0
+theme_override_colors/font_color = Color(1, 0.531167, 0.03, 1)
+theme_override_fonts/font = ExtResource("3_tykgt")
+text = "STILL IN COMBAT!"
+
+[node name="EnemyMarkers" type="Node2D" parent="."]
+
+[node name="1" type="Marker2D" parent="EnemyMarkers"]
+position = Vector2(632, 272)
+
+[node name="2" type="Marker2D" parent="EnemyMarkers"]
+position = Vector2(1106, 85)
+
+[node name="3" type="Marker2D" parent="EnemyMarkers"]
+position = Vector2(1105, 293)
+
+[node name="4" type="Marker2D" parent="EnemyMarkers"]
+position = Vector2(887, 151)
+
+[node name="5" type="Marker2D" parent="EnemyMarkers"]
+position = Vector2(829, 321)
+
+[node name="6" type="Marker2D" parent="EnemyMarkers"]
+position = Vector2(1026, 403)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="PlayerUseCardPos" parent="." instance=ExtResource("3_2fkpd")]
+position = Vector2(329, 285)
+
+[connection signal="pressed" from="EndTurnButton" to="." method="_on_end_turn_button_pressed"]
+[connection signal="pressed" from="EndCombatButton" to="." method="_on_end_combat_button_pressed"]

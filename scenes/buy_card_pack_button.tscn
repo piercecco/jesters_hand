@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://bkqnt7i4dcyd3"]
+
+[ext_resource type="Script" path="res://scripts/buy_card_pack_button.gd" id="1_mvab1"]
+[ext_resource type="Texture2D" uid="uid://c57a5u687vk6d" path="res://assets/menus/card_pack_button.svg" id="2_b03g0"]
+[ext_resource type="FontFile" uid="uid://mi4u0u0ojq0d" path="res://assets/font/Space_Mono/SpaceMono-Bold.ttf" id="3_pkapt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fou3t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jj4y6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ctn13"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u4thw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_so3lf"]
+
+[node name="BuyCardPackButton" type="Control"]
+custom_minimum_size = Vector2(125, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mvab1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -1.0
+offset_right = 394.0
+offset_bottom = 566.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_b03g0")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 98.0
+offset_right = 128.0
+offset_bottom = 121.0
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+
+[node name="BuyButton" type="Button" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_pkapt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fou3t")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jj4y6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ctn13")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_u4thw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_so3lf")
+text = "Buy card pack"
+autowrap_mode = 2
+
+[connection signal="pressed" from="MarginContainer/BuyButton" to="." method="_on_buy_button_pressed"]

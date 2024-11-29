@@ -1,0 +1,189 @@
+[gd_scene load_steps=13 format=3 uid="uid://cqvt06o2i7gt4"]
+
+[ext_resource type="Script" path="res://scripts/player_gui.gd" id="1_qw0vy"]
+[ext_resource type="PackedScene" uid="uid://dnd1cgnkhtxii" path="res://scenes/cards_selector.tscn" id="2_kmmcm"]
+[ext_resource type="FontFile" uid="uid://dt55moadn75gc" path="res://assets/font/Roboto_Mono/static/RobotoMono-Bold.ttf" id="2_vdc14"]
+[ext_resource type="FontFile" uid="uid://cqeg6khmweh66" path="res://assets/font/Roboto_Mono/static/RobotoMono-Regular.ttf" id="3_d5gmm"]
+[ext_resource type="PackedScene" uid="uid://cbnkirahcqxp5" path="res://scenes/death_screen_menu.tscn" id="5_wcyca"]
+[ext_resource type="Shader" path="res://scripts/shaders/death_blur.gdshader" id="5_whele"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mk8d"]
+bg_color = Color(0.187176, 0.187176, 0.187176, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.489622, 0.489622, 0.489622, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_color = Color(0, 0, 0, 0.392157)
+shadow_size = 1
+shadow_offset = Vector2(2, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6qey"]
+bg_color = Color(0.533324, 3.24883e-07, 2.88785e-07, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.458824, 0.054902, 0, 0)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_use28"]
+bg_color = Color(0.104333, 0.757243, 0.738497, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.458824, 0.054902, 0, 0)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iwqm4"]
+shader = ExtResource("5_whele")
+shader_parameter/intensity = 2.753
+
+[sub_resource type="Gradient" id="Gradient_86a7l"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fhhu8"]
+gradient = SubResource("Gradient_86a7l")
+width = 1280
+height = 720
+
+[node name="PlayerGUI" type="Control"]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qw0vy")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 640
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+
+[node name="HealthBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_7mk8d")
+theme_override_styles/fill = SubResource("StyleBoxFlat_m6qey")
+value = 35.0
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/HealthBar"]
+layout_mode = 2
+offset_left = 498.0
+offset_top = 38.0
+offset_right = 592.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.533455, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.196078)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_vdc14")
+theme_override_font_sizes/font_size = 15
+text = "00/00"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 200
+
+[node name="ShieldBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_7mk8d")
+theme_override_styles/fill = SubResource("StyleBoxFlat_use28")
+value = 25.0
+show_percentage = false
+
+[node name="ShieldLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer2/ShieldBar"]
+layout_mode = 2
+offset_left = 301.0
+offset_top = 27.0
+offset_right = 390.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.105516, 0.757198, 0.737163, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.196078)
+theme_override_fonts/font = ExtResource("2_vdc14")
+theme_override_font_sizes/font_size = 15
+text = "00/00"
+horizontal_alignment = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/margin_left = 55
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vdc14")
+theme_override_font_sizes/font_size = 20
+text = "STATS"
+
+[node name="stats" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_d5gmm")
+theme_override_font_sizes/font_size = 15
+text = "test stat"
+
+[node name="CardsSelector" parent="." instance=ExtResource("2_kmmcm")]
+layout_mode = 1
+
+[node name="EffectsContainer" type="Node2D" parent="."]
+position = Vector2(55, 159)
+
+[node name="DeathBlur" type="TextureRect" parent="."]
+z_index = 4
+material = SubResource("ShaderMaterial_iwqm4")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_fhhu8")
+
+[node name="DeathScreenMenu" parent="." instance=ExtResource("5_wcyca")]
+layout_mode = 1

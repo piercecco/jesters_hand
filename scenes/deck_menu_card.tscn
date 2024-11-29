@@ -1,0 +1,255 @@
+[gd_scene load_steps=17 format=3 uid="uid://27064fq3fm6b"]
+
+[ext_resource type="FontFile" uid="uid://p8jllrtc1283" path="res://assets/font/Chokokutai/Chokokutai-Regular.ttf" id="1_bff7p"]
+[ext_resource type="Script" path="res://scripts/deck_menu_card.gd" id="1_g5ybn"]
+[ext_resource type="FontFile" uid="uid://dt55moadn75gc" path="res://assets/font/Roboto_Mono/static/RobotoMono-Bold.ttf" id="2_bmj1d"]
+[ext_resource type="Theme" uid="uid://0nf1kn3phpd8" path="res://assets/themes/scroll_theme.tres" id="3_qpuc1"]
+[ext_resource type="FontFile" uid="uid://it8yysnpsuds" path="res://assets/font/Roboto_Mono/static/RobotoMono-Medium.ttf" id="4_r8ygq"]
+[ext_resource type="FontFile" uid="uid://0r87x0j6burj" path="res://assets/font/Roboto_Mono/static/RobotoMono-MediumItalic.ttf" id="5_pj88e"]
+[ext_resource type="FontFile" uid="uid://mi4u0u0ojq0d" path="res://assets/font/Space_Mono/SpaceMono-Bold.ttf" id="7_fd5b2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbcgd"]
+bg_color = Color(0.571559, 0.506453, 0.290587, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.928174, 0.786989, 0.355904, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egi1c"]
+bg_color = Color(0.173423, 0.210217, 0.210283, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sghu4"]
+bg_color = Color(0.6, 0.427451, 0.384314, 0.964706)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.672266, 0.446664, 0.167708, 1)
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ivnh0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bkq0d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vfjvp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3u27v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d8qu0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gogol"]
+bg_color = Color(0.6, 0.141176, 0.0784314, 0.713726)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.445522, 0.0100036, 0.021131, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="DeckMenuCard" type="Control"]
+custom_minimum_size = Vector2(125, 250)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1155.0
+offset_bottom = -470.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g5ybn")
+
+[node name="CardBackground" type="Panel" parent="."]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -25.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hbcgd")
+
+[node name="MarginContainer" type="MarginContainer" parent="CardBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CardBackground/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CardTitle" type="Label" parent="CardBackground/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_bff7p")
+theme_override_font_sizes/font_size = 15
+text = "CARDNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ActualTitle" type="Label" parent="CardBackground/MarginContainer/VBoxContainer/CardTitle"]
+layout_mode = 2
+offset_top = 17.0
+offset_right = 95.0
+offset_bottom = 40.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("2_bmj1d")
+theme_override_font_sizes/font_size = 10
+text = "Template"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="UnknownTitle" type="RichTextLabel" parent="CardBackground/MarginContainer/VBoxContainer/CardTitle"]
+z_index = 2
+layout_mode = 2
+offset_left = 8.5
+offset_top = 12.0
+offset_right = 403.5
+offset_bottom = 82.0
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/normal_font = ExtResource("2_bmj1d")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center][color=red]Unknown card[/color]"
+autowrap_mode = 2
+
+[node name="Panel" type="Panel" parent="CardBackground/MarginContainer/VBoxContainer/CardTitle/UnknownTitle"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_egi1c")
+
+[node name="MarginContainer" type="MarginContainer" parent="CardBackground/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 15
+
+[node name="Description" type="RichTextLabel" parent="CardBackground/MarginContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(80, 100)
+layout_mode = 2
+theme = ExtResource("3_qpuc1")
+theme_override_fonts/normal_font = ExtResource("4_r8ygq")
+theme_override_fonts/italics_font = ExtResource("5_pj88e")
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "filler-filler-filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler "
+autowrap_mode = 2
+
+[node name="CardCost" type="Panel" parent="CardBackground"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 0
+offset_left = 87.5
+offset_top = 136.0
+offset_right = 112.5
+offset_bottom = 161.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sghu4")
+
+[node name="CardCostLabel" type="Label" parent="CardBackground/CardCost"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EffectsList" type="Node2D" parent="."]
+position = Vector2(-1, 17)
+
+[node name="EraseCardButton" type="Button" parent="."]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 145.0
+offset_right = 169.0
+offset_bottom = 295.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("7_fd5b2")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ivnh0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bkq0d")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vfjvp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3u27v")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d8qu0")
+text = "ERASE
+CARD"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = 147.0
+offset_right = 227.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.08036
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/normal_font = ExtResource("2_bmj1d")
+theme_override_font_sizes/normal_font_size = 100
+text = "ERASED"
+
+[node name="Panel" type="Panel" parent="RichTextLabel"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gogol")
+
+[node name="Price" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 209.0
+offset_right = 844.0
+offset_bottom = 669.0
+scale = Vector2(0.05, 0.05)
+theme_override_font_sizes/normal_font_size = 200
+text = "(25g)"
+
+[connection signal="mouse_entered" from="CardBackground/MarginContainer/VBoxContainer/MarginContainer/Description" to="." method="_on_description_mouse_entered"]
+[connection signal="mouse_exited" from="CardBackground/MarginContainer/VBoxContainer/MarginContainer/Description" to="." method="_on_description_mouse_exited"]
+[connection signal="pressed" from="EraseCardButton" to="." method="_on_erase_card_button_pressed"]

@@ -1,0 +1,101 @@
+[gd_scene load_steps=13 format=3 uid="uid://cbnkirahcqxp5"]
+
+[ext_resource type="Script" path="res://scripts/death_screen_menu.gd" id="1_eg0jq"]
+[ext_resource type="FontFile" uid="uid://cnsone1ihdnyc" path="res://assets/font/Spline_Sans_Mono/static/SplineSansMono-Bold.ttf" id="1_vgxr7"]
+
+[sub_resource type="Gradient" id="Gradient_n0wee"]
+colors = PackedColorArray(0.133333, 0.133333, 0.133333, 1, 0.133196, 0.133196, 0.133196, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gytdd"]
+gradient = SubResource("Gradient_n0wee")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_maclh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v8prj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_45sea"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hgrmc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qqlu5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_obnj3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7j4xc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ih4k0"]
+
+[node name="DeathScreenMenu" type="Control"]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eg0jq")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.792157)
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_gytdd")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 78.0
+offset_bottom = -507.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_vgxr7")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center][color=red]YOU LOST"
+
+[node name="ResetButton" type="Button" parent="."]
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 237.0
+offset_bottom = -365.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_vgxr7")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_maclh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_v8prj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_45sea")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hgrmc")
+text = "RESET GAME"
+
+[node name="QuitButton" type="Button" parent="."]
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 437.0
+offset_bottom = -165.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_vgxr7")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qqlu5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_obnj3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7j4xc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ih4k0")
+text = "QUIT"
+
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

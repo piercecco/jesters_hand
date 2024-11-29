@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://lsuyvcty3cmv"]
+
+[ext_resource type="FontFile" uid="uid://dt55moadn75gc" path="res://assets/font/Roboto_Mono/static/RobotoMono-Bold.ttf" id="1_tt3k2"]
+[ext_resource type="Script" path="res://scripts/damage_label.gd" id="2_c5qhd"]
+
+[node name="DamageLabel" type="RichTextLabel"]
+offset_right = 203.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("1_tt3k2")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[color=red]-100[/color]"
+script = ExtResource("2_c5qhd")

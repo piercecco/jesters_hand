@@ -1,0 +1,371 @@
+[gd_scene load_steps=31 format=3 uid="uid://c53mc7nt6dfg4"]
+
+[ext_resource type="Texture2D" uid="uid://1luwgb46e7si" path="res://assets/menus/rest_map_area.png" id="1_2cw3y"]
+[ext_resource type="Script" path="res://scripts/resting_map_area.gd" id="1_s3nvr"]
+[ext_resource type="PackedScene" uid="uid://bkqnt7i4dcyd3" path="res://scenes/buy_card_pack_button.tscn" id="3_d0iqa"]
+[ext_resource type="FontFile" uid="uid://cnsone1ihdnyc" path="res://assets/font/Spline_Sans_Mono/static/SplineSansMono-Bold.ttf" id="3_y3bqj"]
+[ext_resource type="PackedScene" uid="uid://cu3nlq2e5c5nq" path="res://scenes/buy_artifact_button.tscn" id="4_iqlat"]
+[ext_resource type="FontFile" uid="uid://dt55moadn75gc" path="res://assets/font/Roboto_Mono/static/RobotoMono-Bold.ttf" id="4_nhlaf"]
+[ext_resource type="PackedScene" uid="uid://5rm6deqt6hlv" path="res://scenes/deck_menu.tscn" id="6_4nv8g"]
+[ext_resource type="Texture2D" uid="uid://cax52dt7taeax" path="res://assets/menus/proceed_arrow.svg" id="7_h1xtc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_owr71"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dkrmr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bkadd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_350e0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3318r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r6wsy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5yw3p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eocu0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c5mib"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7asu5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5e30x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cat8v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nd7wu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2kqmg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i6mmh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ygfq"]
+bg_color = Color(0.187176, 0.187176, 0.187176, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.489622, 0.489622, 0.489622, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_color = Color(0, 0, 0, 0.392157)
+shadow_size = 1
+shadow_offset = Vector2(2, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5qy5"]
+bg_color = Color(0.533324, 3.24883e-07, 2.88785e-07, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.458824, 0.054902, 0, 0)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0ctv"]
+bg_color = Color(0.104333, 0.757243, 0.738497, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.458824, 0.054902, 0, 0)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_82gko"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qg83"]
+bg_color = Color(0.230315, 0.230315, 0.230315, 0.839216)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_so6o2"]
+bg_color = Color(0.230315, 0.230315, 0.230315, 0.839216)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b74kw"]
+bg_color = Color(0.230315, 0.230315, 0.230315, 0.839216)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="RestingMapArea" type="Node2D"]
+script = ExtResource("1_s3nvr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("1_2cw3y")
+
+[node name="HealButton" type="Button" parent="."]
+offset_left = 122.0
+offset_top = 268.0
+offset_right = 164.0
+offset_bottom = 299.0
+theme_override_fonts/font = ExtResource("3_y3bqj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_owr71")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_dkrmr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bkadd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_350e0")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3318r")
+text = "Click to heal"
+
+[node name="CardPacks" type="Node2D" parent="."]
+
+[node name="Control" type="Control" parent="CardPacks"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 514.0
+offset_top = 117.0
+offset_right = 1192.0
+offset_bottom = 235.0
+
+[node name="GridContainer" type="GridContainer" parent="CardPacks/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 85.0
+offset_right = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="BuyCardPackButton" parent="CardPacks/Control/GridContainer" instance=ExtResource("3_d0iqa")]
+layout_mode = 2
+
+[node name="BuyCardPackButton2" parent="CardPacks/Control/GridContainer" instance=ExtResource("3_d0iqa")]
+layout_mode = 2
+
+[node name="BuyCardPackButton3" parent="CardPacks/Control/GridContainer" instance=ExtResource("3_d0iqa")]
+layout_mode = 2
+
+[node name="BuyCardPackButton4" parent="CardPacks/Control/GridContainer" instance=ExtResource("3_d0iqa")]
+layout_mode = 2
+
+[node name="BuyCardPackButton5" parent="CardPacks/Control/GridContainer" instance=ExtResource("3_d0iqa")]
+layout_mode = 2
+
+[node name="Artifacts" type="Node2D" parent="."]
+
+[node name="Control" type="Control" parent="Artifacts"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 524.0
+offset_top = 338.0
+offset_right = 1178.0
+offset_bottom = 615.0
+
+[node name="GridContainer" type="GridContainer" parent="Artifacts/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = -22.0
+offset_right = 52.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="ArtifactButton" parent="Artifacts/Control/GridContainer" instance=ExtResource("4_iqlat")]
+layout_mode = 2
+
+[node name="ArtifactButton2" parent="Artifacts/Control/GridContainer" instance=ExtResource("4_iqlat")]
+layout_mode = 2
+
+[node name="ArtifactButton3" parent="Artifacts/Control/GridContainer" instance=ExtResource("4_iqlat")]
+layout_mode = 2
+
+[node name="ArtifactButton4" parent="Artifacts/Control/GridContainer" instance=ExtResource("4_iqlat")]
+layout_mode = 2
+
+[node name="ArtifactButton5" parent="Artifacts/Control/GridContainer" instance=ExtResource("4_iqlat")]
+layout_mode = 2
+
+[node name="ArtifactButton6" parent="Artifacts/Control/GridContainer" instance=ExtResource("4_iqlat")]
+layout_mode = 2
+
+[node name="RefreshShopButton" type="Button" parent="."]
+visible = false
+offset_left = 744.0
+offset_top = 250.0
+offset_right = 930.0
+offset_bottom = 281.0
+text = "Refresh shop (50g)"
+
+[node name="CurrentGoldLabel" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 651.0
+offset_right = 349.0
+offset_bottom = 705.0
+theme_override_fonts/font = ExtResource("4_nhlaf")
+theme_override_font_sizes/font_size = 30
+text = "Current Gold: 999g"
+vertical_alignment = 1
+
+[node name="ProgressButton" type="Button" parent="."]
+z_index = 2
+offset_left = 1076.0
+offset_top = 652.0
+offset_right = 1263.0
+offset_bottom = 702.0
+theme_override_fonts/font = ExtResource("4_nhlaf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r6wsy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5yw3p")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_eocu0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c5mib")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7asu5")
+text = "Return to map"
+
+[node name="TextureRect" type="TextureRect" parent="ProgressButton"]
+z_index = -1
+layout_mode = 0
+offset_left = -15.0
+offset_top = -31.0
+offset_right = 741.0
+offset_bottom = 347.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_h1xtc")
+
+[node name="LoopButton" type="Button" parent="."]
+offset_left = 123.0
+offset_top = 346.0
+offset_right = 391.0
+offset_bottom = 396.0
+theme_override_fonts/font = ExtResource("4_nhlaf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5e30x")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cat8v")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nd7wu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2kqmg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i6mmh")
+text = "Loop back (100g)"
+
+[node name="HealthBars" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 121.0
+offset_top = 251.0
+offset_right = 431.0
+offset_bottom = 287.0
+scale = Vector2(0.5, 0.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HealthBars"]
+layout_mode = 0
+offset_right = 525.0
+offset_bottom = 20.0
+
+[node name="MarginContainer" type="MarginContainer" parent="HealthBars/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+
+[node name="HealthBar" type="ProgressBar" parent="HealthBars/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_0ygfq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_f5qy5")
+value = 35.0
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="HealthBars/VBoxContainer/MarginContainer/HealthBar"]
+layout_mode = 2
+offset_left = 436.0
+offset_top = 19.0
+offset_right = 530.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.533455, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.196078)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("4_nhlaf")
+theme_override_font_sizes/font_size = 30
+text = "00/00"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="HealthBars/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 200
+
+[node name="ShieldBar" type="ProgressBar" parent="HealthBars/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_0ygfq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_g0ctv")
+value = 25.0
+show_percentage = false
+
+[node name="DeckMenu" parent="." instance=ExtResource("6_4nv8g")]
+visible = false
+z_index = 5
+offset_left = 557.0
+offset_right = 1257.0
+offset_bottom = 720.0
+
+[node name="ShowDeckButton" type="Button" parent="."]
+z_index = 9
+offset_left = 199.0
+offset_top = 63.0
+offset_right = 455.0
+offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("4_nhlaf")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_82gko")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1qg83")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_so6o2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b74kw")
+text = "Show/hide card deletion menu"
+
+[connection signal="pressed" from="HealButton" to="." method="_on_heal_button_pressed"]
+[connection signal="pressed" from="RefreshShopButton" to="." method="_on_refresh_shop_button_pressed"]
+[connection signal="pressed" from="ProgressButton" to="." method="_on_progress_button_pressed"]
+[connection signal="pressed" from="LoopButton" to="." method="_on_loop_button_pressed"]
+[connection signal="pressed" from="ShowDeckButton" to="." method="_on_show_deck_button_pressed"]

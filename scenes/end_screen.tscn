@@ -1,0 +1,211 @@
+[gd_scene load_steps=32 format=3 uid="uid://cw1vpcvj7ytvg"]
+
+[ext_resource type="Script" path="res://scripts/end_screen.gd" id="1_k4bcj"]
+[ext_resource type="Texture2D" uid="uid://bat4f88flt1h3" path="res://assets/menus/win_screen/0001.png" id="2_e8c2b"]
+[ext_resource type="Texture2D" uid="uid://cftp3qkr00mcs" path="res://assets/menus/win_screen/0006.png" id="3_x1y31"]
+[ext_resource type="Texture2D" uid="uid://26ckgqa210bj" path="res://assets/menus/win_screen/0011.png" id="4_qjlw1"]
+[ext_resource type="Texture2D" uid="uid://0fixkfekx31n" path="res://assets/menus/win_screen/0016.png" id="5_p6tdf"]
+[ext_resource type="Texture2D" uid="uid://b5fdvrtbbviu8" path="res://assets/menus/win_screen/0021.png" id="6_vtu6t"]
+[ext_resource type="Texture2D" uid="uid://m0n5gaeta3or" path="res://assets/menus/win_screen/0026.png" id="7_yp3np"]
+[ext_resource type="Texture2D" uid="uid://cmtt1x1r5tusw" path="res://assets/menus/win_screen/0031.png" id="8_wvnd1"]
+[ext_resource type="Texture2D" uid="uid://rm1k1fm6r1ch" path="res://assets/menus/win_screen/0036.png" id="9_l55pk"]
+[ext_resource type="Texture2D" uid="uid://bh0odqqukqjvs" path="res://assets/menus/win_screen/0041.png" id="10_tehv4"]
+[ext_resource type="Texture2D" uid="uid://1n47e1w0cexj" path="res://assets/menus/win_screen/0046.png" id="11_mcgjn"]
+[ext_resource type="Texture2D" uid="uid://se5y0ohky7nh" path="res://assets/menus/win_screen/0051.png" id="12_tivbf"]
+[ext_resource type="Texture2D" uid="uid://korx16bwtqn0" path="res://assets/menus/win_screen/0056.png" id="13_lww0f"]
+[ext_resource type="Texture2D" uid="uid://dmqpqjp5svgxf" path="res://assets/menus/win_screen/0061.png" id="14_qt1kw"]
+[ext_resource type="Texture2D" uid="uid://b3jgkucmlb6qp" path="res://assets/menus/win_screen/0066.png" id="15_0ssio"]
+[ext_resource type="Texture2D" uid="uid://cuh007gwb7or2" path="res://assets/menus/win_screen/0071.png" id="16_am2vc"]
+[ext_resource type="Texture2D" uid="uid://yjnj53eb58sl" path="res://assets/menus/win_screen/0076.png" id="17_il5l3"]
+[ext_resource type="Texture2D" uid="uid://djw4q4f4mvxns" path="res://assets/menus/win_screen/0081.png" id="18_5wojh"]
+[ext_resource type="Texture2D" uid="uid://c8k1nvxtwjb3m" path="res://assets/menus/win_screen/0086.png" id="19_5irpw"]
+[ext_resource type="Texture2D" uid="uid://bygdbvwqg6mct" path="res://assets/menus/win_screen/0091.png" id="20_84cqf"]
+[ext_resource type="Texture2D" uid="uid://dk3ctd27iqw3d" path="res://assets/menus/win_screen/0096.png" id="21_frkax"]
+[ext_resource type="FontFile" uid="uid://cnsone1ihdnyc" path="res://assets/font/Spline_Sans_Mono/static/SplineSansMono-Bold.ttf" id="22_eex74"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ipr3s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e8c2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x1y31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qjlw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p6tdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vtu6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yp3np")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wvnd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_l55pk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tehv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mcgjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tivbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_lww0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qt1kw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0ssio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_am2vc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_il5l3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5wojh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_5irpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_84cqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_frkax")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3csdj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_30ucd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xt1yu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y4veq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ct7yy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_apt25"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87gne"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hf5y4"]
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k4bcj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 424)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ipr3s")
+autoplay = "default"
+frame_progress = 0.609272
+
+[node name="ResetButton" type="Button" parent="."]
+z_index = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 570.0
+offset_right = -730.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("22_eex74")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3csdj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_30ucd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xt1yu")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y4veq")
+text = "RESET GAME"
+
+[node name="QuitButton" type="Button" parent="."]
+z_index = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 746.0
+offset_top = 570.0
+offset_right = -34.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("22_eex74")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ct7yy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_apt25")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_87gne")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hf5y4")
+text = "QUIT"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 78.0
+offset_bottom = -494.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center][color=gold]VICTORY ACHIEVED"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="RichTextLabel"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 4.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center][color=#434551]VICTORY ACHIEVED"
+
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

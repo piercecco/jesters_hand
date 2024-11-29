@@ -1,0 +1,374 @@
+[gd_scene load_steps=16 format=3 uid="uid://33pqigtthinb"]
+
+[ext_resource type="Texture2D" uid="uid://d0ljqrb7ax5ix" path="res://assets/menus/map.png" id="1_8yb0i"]
+[ext_resource type="Script" path="res://scripts/map_select.gd" id="1_mant4"]
+[ext_resource type="Texture2D" uid="uid://dvgynofqi28cg" path="res://assets/menus/map_lines_overlay.png" id="3_dkcfy"]
+[ext_resource type="Texture2D" uid="uid://cvs424xf7226n" path="res://assets/player/00.png" id="4_tx3rl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rw7so"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8c66k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjmfl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_40r3w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_556r2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cgxv1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p4k7m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l1xwd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qq2h3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lyooe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hp65d"]
+
+[node name="MapSelect" type="Node2D"]
+script = ExtResource("1_mant4")
+
+[node name="MapBackground" type="Sprite2D" parent="."]
+position = Vector2(672, 360)
+texture = ExtResource("1_8yb0i")
+
+[node name="MapOverlay" type="Sprite2D" parent="."]
+position = Vector2(1264, 360)
+scale = Vector2(0.275, 0.275)
+texture = ExtResource("3_dkcfy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(672, 360)
+
+[node name="PlayerMarker" type="Marker2D" parent="."]
+position = Vector2(120, 344)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerMarker"]
+texture = ExtResource("4_tx3rl")
+
+[node name="MapManagerMarkers" type="Node2D" parent="."]
+
+[node name="0" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(124, 351)
+
+[node name="1" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(438, 216)
+
+[node name="2" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(697, 332)
+
+[node name="3" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(992, 380)
+
+[node name="4" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(712, 89)
+
+[node name="5" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(968, 82)
+
+[node name="6" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(450, 522)
+
+[node name="7" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(761, 658)
+
+[node name="8" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(1020, 605)
+
+[node name="9" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(1174, 352)
+
+[node name="10" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(1531, 141)
+
+[node name="11" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(1485, 614)
+
+[node name="12" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(1968, 500)
+
+[node name="13" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(2133, 102)
+
+[node name="14" type="Marker2D" parent="MapManagerMarkers"]
+position = Vector2(2406, 366)
+
+[node name="MapButtons" type="Node2D" parent="."]
+
+[node name="1" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 150)
+offset_left = 358.0
+offset_top = 137.0
+offset_right = 508.0
+offset_bottom = 287.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="2" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 150)
+offset_left = 625.0
+offset_top = 243.0
+offset_right = 775.0
+offset_bottom = 393.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="3" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 150)
+offset_left = 904.0
+offset_top = 300.0
+offset_right = 1054.0
+offset_bottom = 450.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="4" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 150)
+offset_left = 637.0
+offset_top = 13.0
+offset_right = 787.0
+offset_bottom = 163.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="5" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 150)
+offset_left = 896.0
+offset_top = 17.0
+offset_right = 1046.0
+offset_bottom = 167.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="6" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 150)
+offset_left = 382.0
+offset_top = 444.0
+offset_right = 532.0
+offset_bottom = 594.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="7" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 150)
+offset_left = 678.0
+offset_top = 572.0
+offset_right = 828.0
+offset_bottom = 722.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="8" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 150)
+offset_left = 944.0
+offset_top = 512.0
+offset_right = 1094.0
+offset_bottom = 662.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="9" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 300)
+offset_left = 1121.0
+offset_top = 189.0
+offset_right = 1271.0
+offset_bottom = 489.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="10" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 300)
+offset_left = 1485.0
+offset_top = -5.0
+offset_right = 1635.0
+offset_bottom = 295.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="11" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 300)
+offset_left = 1411.0
+offset_top = 453.0
+offset_right = 1561.0
+offset_bottom = 753.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="12" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 300)
+offset_left = 1891.0
+offset_top = 326.0
+offset_right = 2041.0
+offset_bottom = 626.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="13" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 300)
+offset_left = 2053.0
+offset_top = -51.0
+offset_right = 2203.0
+offset_bottom = 249.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="14" type="Button" parent="MapButtons"]
+custom_minimum_size = Vector2(150, 300)
+offset_left = 2326.0
+offset_top = 197.0
+offset_right = 2476.0
+offset_bottom = 497.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rw7so")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8c66k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sjmfl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_40r3w")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_556r2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cgxv1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p4k7m")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_l1xwd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qq2h3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lyooe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hp65d")
+
+[node name="BossButton" type="Button" parent="."]
+visible = false
+offset_left = 136.0
+offset_top = 627.0
+offset_right = 347.0
+offset_bottom = 646.0
+text = "GO TO BOSS"
+
+[connection signal="pressed" from="MapButtons/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="MapButtons/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="MapButtons/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="MapButtons/4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="MapButtons/5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="MapButtons/6" to="." method="_on_6_pressed"]
+[connection signal="pressed" from="MapButtons/7" to="." method="_on_7_pressed"]
+[connection signal="pressed" from="MapButtons/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="MapButtons/9" to="." method="_on_9_pressed"]
+[connection signal="pressed" from="MapButtons/10" to="." method="_on_10_pressed"]
+[connection signal="pressed" from="MapButtons/11" to="." method="_on_11_pressed"]
+[connection signal="pressed" from="MapButtons/12" to="." method="_on_12_pressed"]
+[connection signal="pressed" from="MapButtons/13" to="." method="_on_13_pressed"]
+[connection signal="pressed" from="MapButtons/14" to="." method="_on_14_pressed"]
+[connection signal="pressed" from="BossButton" to="." method="_on_button_pressed"]
